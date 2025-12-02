@@ -1,0 +1,133 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: cornflowerblue;
+}
+
+
+
+.container {
+    border: 1px solid black;
+    width: 100%;
+    height: 100svh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.encabezado{
+    /*border: 1px solid red;*/
+    width: 450px;
+    height: 100px;
+    justify-content: center;
+    align-content: center;
+}
+
+.txt-encabezado{
+    color: white;
+}
+
+.conversor {
+    box-shadow: 5px 5px 10px grey;
+    background-color: lightslategrey;
+    width: 250px;
+    height: 250px;
+    padding: 5px;
+    text-align: center;
+    /*align-content: center;*/
+}
+
+.seccionClp {
+    /*border: 1px solid red;*/
+    height: 80px;
+    text-align: center;
+    margin: 5px;
+    align-content: center;
+}
+
+.seccionMonedas{
+    /*border: 1px solid blue;*/
+    height: 60px;
+    margin: 5px;
+    align-content: center;
+}
+
+.select-monedas{
+    width: 200px;
+    height: 25px;
+}
+
+.seccionResultado{
+    /*border: 1px solid greenyellow;*/
+    height: 40px;
+    margin: 5px;
+    justify-items: center;
+    align-content: center;
+}
+
+.titulo {
+    color: white;
+}
+
+.monedaClp {
+    width: 200px;
+    height: 25px;
+    text-align: center;
+}
+
+.subtitulo {
+    color: white;
+}
+
+.btn-buscar {
+    width: 200px;
+    height: 30px;
+    border-radius: 3px 3px 3px 3px;
+    background-color: dodgerblue;
+    border: none;
+    color: white
+}
+
+.grafico{
+    border: 1px solid black;
+    background-color: azure;
+    width: 90%;
+    height: 200px;
+    margin-top: 30px;
+    display: none;
+}
+
+.resultado{
+    border: 1px solid azure;
+    width: 200px;
+    height: 25px;
+    margin-top: 10px;
+}
+
+.btn-chk{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-evenly;
+    align-content: flex-start;
+}
+
+.graph-chk{
+    /*height: 50px;*/
+    /*border: 1px solid red;*/
+
+    flex-direction: row;
+
+    align-content: center;
+    text-align: center;
+    margin-top: 5px;
+}
