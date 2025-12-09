@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=chart_data" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <script type="text/javascript" src="./assets/js/script.js"></script>
+
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <title>API - Conversor Monedas</title>
@@ -24,31 +28,38 @@
 
             <div class="seccionClp">
                 <h2 class="titulo">PESOS CLP</h2>
-                <input placeholder="Ingrese monto en CLP" class="monedaClp" type="text" id="txt-monedaClp">
+                <input placeholder="Ingrese monto en CLP" class="monedaClp" type="text" id="txt-monedaClp" oninput="fnCalculaMoneda();">
             </div>
 
             <div class="seccionMonedas">
                 <h4 class="subtitulo">Moneda a convertir</h4>
-                <select placeholder="Seleccione moneda" class="select-monedas" name="" id="cmb-monedas">
-                    <option value="manzana">Manzana</option>
-                    <option value="banana">Banana</option>
-                    <option value="naranja">Naranja</option>
+                <select class="select-monedas" name="monedas" id="cmb-monedas" onchange="fnCalculaMoneda();">
+                    <!--ACA VA EL CODIGO RENDERIZADO CON LAS MONEDAS-->
                 </select>
             </div>
-            <div class="seccionResultado">
-                <button class="btn-buscar">Buscar</button>
-                <div class="btn-chk">
-                    <p class="resultado" id="txt-resultado">...</p>
-                </div>
-                <div class="graph-chk">
-                    <span class="material-symbols-outlined">chart_data</span><input onclick="fnChkGrafico();" id="chk" type="checkbox" value="">
-                </div>
+
+            <div>
+                <button class="btn-buscar" onclick="fnCalculaMoneda();">Buscar</button>
             </div>
 
+            <div class="seccionResultado">
+
+                <div class="div-resultado">
+                    <p class="resultado" id="txt-resultado">...</p>
+                </div>
+
+                <div class="chk-graph">
+                    <span class="material-symbols-outlined">chart_data</span><input onclick="fnChkGrafico();" id="chk"
+                        type="checkbox" value="">
+                </div>
+
+            </div>
 
         </div>
 
-        <div id="miGraph" class="grafico">
+        <div class="Graph" id="miGraph">
+
+            <canvas id="grafico"></canvas>
 
         </div>
 
